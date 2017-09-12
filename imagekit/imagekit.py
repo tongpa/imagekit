@@ -8,11 +8,9 @@ from itertools import chain
 import io
 import codecs
 
-
 class ImageKit(object):
     """
     Main class that does all generation routine.
-
     :param url_or_file: str - either a URL, a path to a file or a string containing HTML
                        to convert
     :param type_: str - either 'url', 'file' or 'string'
@@ -24,10 +22,8 @@ class ImageKit(object):
 
     class ImproperSourceError(Exception):
         """Wrong source type for stylesheets"""
-
         def __init__(self, msg):
             self.msg = msg
-
         def __str__(self):
             return self.msg
 
