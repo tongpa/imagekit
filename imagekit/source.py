@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import io
-
-
 class Source(object):
     def __init__(self, url_or_file, type_):
         self.source = url_or_file
