@@ -4,9 +4,7 @@ import sys
 class Configuration(object):
     def __init__(self, wkhtmltopdf='', meta_tag_prefix='pdfkit-'):
         self.meta_tag_prefix = meta_tag_prefix
-
         self.wkhtmltopdf = wkhtmltopdf
-
         if not self.wkhtmltopdf:
             if sys.platform == 'win32':
                 self.wkhtmltopdf = subprocess.Popen(

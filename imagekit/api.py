@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-
 from .imagekit import ImageKit
 from .imagekit import Configuration
-
-
 def from_url(url, output_path, options=None, toc=None, cover=None, configuration=None):
     """
     Convert file of files from URLs to PDF document
@@ -17,12 +14,9 @@ def from_url(url, output_path, options=None, toc=None, cover=None, configuration
 
     Returns: True on success
     """
-
     r = ImageKit(url, 'url', options=options, toc=toc, cover=cover,
-               configuration=configuration)
-    
+               configuration=configuration)    
     return r.to_image(output_path)
-
 
 def from_file(input, output_path, options=None, toc=None, cover=None, css=None,
               configuration=None):
@@ -42,9 +36,7 @@ def from_file(input, output_path, options=None, toc=None, cover=None, css=None,
 
     r = ImageKit(input, 'file', options=options, toc=toc, cover=cover, css=css,
                configuration=configuration)
-
     return r.to_image(output_path)
-
 
 def from_string(input, output_path, options=None, toc=None, cover=None, css=None,
                 configuration=None):
@@ -61,12 +53,9 @@ def from_string(input, output_path, options=None, toc=None, cover=None, css=None
 
     Returns: True on success
     """
-
     r = ImageKit(input, 'string', options=options, toc=toc, cover=cover, css=css,
                configuration=configuration)
-
     return r.to_image(output_path)
-
 
 def configuration(**kwargs):
     """
@@ -75,5 +64,4 @@ def configuration(**kwargs):
     :param wkhtmltopdf: path to binary
     :param meta_tag_prefix: the prefix for ``ImageKit`` specific meta tags
     """
-
     return Configuration(**kwargs)
